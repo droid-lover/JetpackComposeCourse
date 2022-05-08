@@ -13,31 +13,27 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.nativemobilebits.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeCourseTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
-            }
+            Greetings(name = "Android")
         }
     }
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greetings(name: String) {
+    TextValue(value = name)
+}
+
+@Composable
+fun TextValue(value:String){
+    Text(text = "Hello $value")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
-    JetpackComposeCourseTheme {
-        Greeting("Android")
-    }
+fun DefaultPreview(){
+    Greetings(name = "Android")
 }
