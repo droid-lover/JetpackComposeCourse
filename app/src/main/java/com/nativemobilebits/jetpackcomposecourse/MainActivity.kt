@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -30,8 +31,7 @@ fun WelcomeText(value:String){
     Text(
         text = value,
         modifier = Modifier
-            .width(100.dp)
-            .height(80.dp)
+            .size(width = 140.dp, height = 90.dp)
     )
 }
 
