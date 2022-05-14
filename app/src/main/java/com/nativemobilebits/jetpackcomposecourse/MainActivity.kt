@@ -31,7 +31,10 @@ fun WelcomeText(value:String){
     Text(
         text = value,
         modifier = Modifier
-            .size(width = 140.dp, height = 90.dp)
+            .size(100.dp)
+//            .size(width = 140.dp, height = 90.dp)
+//            .width(140.dp)
+//            .height(80.dp)
     )
 }
 
