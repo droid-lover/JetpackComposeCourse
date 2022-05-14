@@ -3,10 +3,7 @@ package com.nativemobilebits.jetpackcomposecourse
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -21,25 +18,29 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           WelcomeText(value = "Hello World")
+            WelcomeText(value = "Hello World")
         }
     }
 }
 
 @Composable
-fun WelcomeText(value:String){
+fun WelcomeText(value: String) {
     Text(
         text = value,
         modifier = Modifier
-            .size(100.dp)
-//            .size(width = 140.dp, height = 90.dp)
-//            .width(140.dp)
-//            .height(80.dp)
+            .fillMaxSize()
+//            .fillMaxWidth()
+//            .fillMaxHeight()
+            .height(80.dp)
+            .padding(
+               20.dp
+            )
+
     )
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview(){
+fun DefaultPreview() {
     WelcomeText(value = "Hello World")
 }
