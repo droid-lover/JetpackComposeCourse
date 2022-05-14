@@ -17,23 +17,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Greetings(name = "Android")
+           WelcomeText(value = "Hello World")
         }
     }
 }
 
 @Composable
-fun Greetings(name: String) {
-    TextValue(value = name)
-}
-
-@Composable
-fun TextValue(value:String){
-    Text(text = "Hello $value")
+fun WelcomeText(value:String){
+    Text(text = value)
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview(){
-    Greetings(name = "Android")
+    WelcomeText(value = "Hello World")
 }
