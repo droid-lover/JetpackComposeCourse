@@ -39,11 +39,9 @@ fun WelcomeText(value: String) {
             .height(140.dp)
             .padding(
                 20.dp
-            ), style = TextStyle(
-            color = Color.Blue,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.ExtraBold
-        )
+            ),
+        style = MaterialTheme.typography.h4,
+        color = Color.Blue
 
     )
 }
