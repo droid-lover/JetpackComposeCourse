@@ -28,6 +28,11 @@ I hope you found this crash course helpful happy coding:)  be you be happy
 <a href="https://www.youtube.com/watch?v=ceNXWC-vtA0">How to create Composables in Jetpack Compose 🚀(Part 2)</a>
 
 
+## Third Part
+
+<a href="https://youtu.be/fZCitd-lRIw">Modifiers - Android Jetpack Compose 🚀(Part 3)</a>
+
+
 
 
 
