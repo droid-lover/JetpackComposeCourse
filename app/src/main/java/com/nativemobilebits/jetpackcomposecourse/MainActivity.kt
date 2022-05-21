@@ -17,6 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.material.Surface
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nativemobilebits.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
@@ -46,8 +47,7 @@ fun WelcomeText(value: String) {
     Text(
         text = value,
         modifier = Modifier
-            .fillMaxWidth()
-            .height(140.dp)
+            .wrapContentSize(align = Alignment.CenterStart)
             .padding(
                 20.dp
             ),
