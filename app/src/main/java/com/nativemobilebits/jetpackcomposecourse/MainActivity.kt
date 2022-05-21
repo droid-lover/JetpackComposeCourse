@@ -16,6 +16,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.material.Surface
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nativemobilebits.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
@@ -25,8 +26,18 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            WelcomeText(value = "Hello World")
+            MainScreen()
         }
+    }
+}
+
+@Composable
+fun MainScreen() {
+    Surface(
+        color = Color.Gray,
+        modifier = Modifier.fillMaxSize()
+    ) {
+        WelcomeText(value = "Hello World")
     }
 }
 
@@ -49,5 +60,5 @@ fun WelcomeText(value: String) {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    WelcomeText(value = "Hello World")
+    MainScreen()
 }
