@@ -39,9 +39,10 @@ fun MainScreen() {
         modifier = Modifier.fillMaxSize()
     ) {
         Row {
-            HorizontalBar(color = )
-            HorizontalBar()
-            HorizontalBar()
+            HorizontalBar(color = Color.Yellow)
+            HorizontalBar(color = Color.Red)
+            HorizontalBar(Color.Green)
+            HorizontalBar(color = Color.Blue)
         }
 
     }
@@ -52,7 +53,7 @@ fun HorizontalBar(color: Color){
     Surface(
         color = color,
         modifier = Modifier
-            .height(400.dp)
+            .fillMaxHeight()
             .width(40.dp)
     ) {
 
