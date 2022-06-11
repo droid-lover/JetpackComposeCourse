@@ -38,15 +38,34 @@ fun MainScreen() {
         color = Color.Gray,
         modifier = Modifier.fillMaxSize()
     ) {
-        WelcomeText(value = "Hello World")
+        Row {
+            HorizontalBar(color = )
+            HorizontalBar()
+            HorizontalBar()
+        }
+
     }
 }
+
+@Composable
+fun HorizontalBar(color: Color){
+    Surface(
+        color = color,
+        modifier = Modifier
+            .height(400.dp)
+            .width(40.dp)
+    ) {
+
+    }
+}
+
 
 @Composable
 fun WelcomeText(value: String) {
     Text(
         text = value,
         modifier = Modifier
+            .wrapContentWidth()
             .wrapContentSize(align = Alignment.CenterStart)
             .padding(
                 20.dp
