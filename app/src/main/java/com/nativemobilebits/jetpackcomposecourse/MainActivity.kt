@@ -38,7 +38,11 @@ fun MainScreen() {
         color = Color.Gray,
         modifier = Modifier.fillMaxSize()
     ) {
-        Row {
+        Row(
+            modifier = Modifier.fillMaxSize(),
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             HorizontalBar(color = Color.Yellow)
             HorizontalBar(color = Color.Red)
             HorizontalBar(Color.Green)
@@ -49,11 +53,11 @@ fun MainScreen() {
 }
 
 @Composable
-fun HorizontalBar(color: Color){
+fun HorizontalBar(color: Color) {
     Surface(
         color = color,
         modifier = Modifier
-            .fillMaxHeight()
+            .height(500.dp)
             .width(40.dp)
     ) {
 
