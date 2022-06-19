@@ -40,7 +40,9 @@ fun MainScreen() {
     ) {
 
         Column(
-            modifier =  Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             SquareBar(color = Color.Blue)
             SquareBar(color = Color.Magenta)
