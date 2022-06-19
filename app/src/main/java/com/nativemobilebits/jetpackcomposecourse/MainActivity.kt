@@ -38,27 +38,26 @@ fun MainScreen() {
         color = Color.Gray,
         modifier = Modifier.fillMaxSize()
     ) {
-        Row(
-            modifier = Modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.SpaceEvenly,
-            verticalAlignment = Alignment.CenterVertically
+
+        Column(
+            modifier =  Modifier.fillMaxSize()
         ) {
-            HorizontalBar(color = Color.Yellow)
-            HorizontalBar(color = Color.Red)
-            HorizontalBar(Color.Green)
-            HorizontalBar(color = Color.Blue)
+            SquareBar(color = Color.Blue)
+            SquareBar(color = Color.Magenta)
+            SquareBar(color = Color.Green)
+            SquareBar(color = Color.Yellow)
         }
 
     }
 }
 
 @Composable
-fun HorizontalBar(color: Color) {
+fun SquareBar(color: Color) {
     Surface(
         color = color,
         modifier = Modifier
-            .height(500.dp)
-            .width(40.dp)
+            .height(120.dp)
+            .width(120.dp)
     ) {
 
     }
